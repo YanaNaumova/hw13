@@ -5,8 +5,8 @@ import styles from "../styles/UserList.module.css";
 function UserList({ userList }) {
   return (
     <div className={styles.userListContainer}>
-      {userList.map((user) => {
-        return <UserItem name={user} />;
+      {userList.map((user, ind) => {
+        return <UserItem key={ind} name={user} />;
       })}
     </div>
   );
